@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Dark background */
+}
+
+.container {
+    text-align: center;
+    background-color: #222; /* Darker container background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light shadow */
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 800px; /* Max width for larger screens */
+}
+
+.plan {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #e74c3c; /* Radiant red border */
+    border-radius: 5px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background-color: #333; /* Darker plan background */
+    color: #ffffff; /* White text for readability */
+}
+
+.plan-content {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    flex-direction: row; /* Default to row direction */
+}
+
+.plan-text {
+    flex: 1; /* Allow text to take remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.plan-image {
+    width: 100px; /* Set a fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 15px; /* Add space between text and image */
+}
+
+.plan:hover {
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5); /* Glow effect on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+h1 {
+    color: #e74c3c; /* Radiant red for headings */
+}
+
+.contact-button {
+    padding: 10px 15px;
+    background-color: #e74c3c; /* Radiant red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plan-content {
+        flex-direction: column; /* Stack text and image on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .plan-image {
+        width: 80%; /* Make image responsive */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+}
